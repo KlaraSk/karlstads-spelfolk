@@ -1,0 +1,38 @@
+.nav {
+}
+
+.nav__list {
+  list-style-type: none;
+  gap: 4rem;
+}
+
+.nav__list-item {
+  cursor: pointer;
+}
+
+.nav__list-item-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__list-item-link:hover {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav__list-item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--light-grey);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav__list-item-link:hover::after {
+  transform: scaleX(1);
+}

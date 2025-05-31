@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Variables ===== */
+
+:root {
+  /* Colors */
+  --red: #8c4339;
+  --light-green: #a19f80;
+  --dark-green: #475b42;
+  --dark-grey: #2c2c2c;
+  --light-grey: #726c60;
+  --beige: #fbead6;
+
+  /* Fonts */
+  --merriweather: "Merriweather", serif;
+  --inter: "Inter", sans serif;
+
+  --2xl: 3rem;
+  --xl: 2.25rem;
+  --lg: 1.875rem;
+  --md: 1.5rem;
+  --base: 1rem;
+  --sm: 0.875rem;
+  --xs: 0.75rem;
+
+  --bold: 700;
+  --semibold: 500;
+  --regular: 400;
+}
+
+/* ===== Fonts ===== */
+.heading-1 {
+  font-family: var(--merriweather);
+  font-size: var(--2xl);
+  font-weight: var(--bold);
+}
+
+.heading-2 {
+  font-family: var(--merriweather);
+  font-size: var(--xl);
+  font-weight: var(--bold);
+}
+
+.heading-3 {
+  font-family: var(--merriweather);
+  font-size: var(--lg);
+  font-weight: var(--bold);
+}
+
+.heading-4 {
+  font-family: var(--merriweather);
+  font-size: var(--md);
+  font-weight: var(--bold);
+}
+
+.body-large {
+  font-family: var(--inter);
+  font-size: var(--md);
+  line-height: 27;
+}
+
+.body-base {
+  font-family: var(--inter);
+  font-size: var(--base);
+  line-height: 24px;
+}
+
+.body-small {
+  font-family: var(--inter);
+  font-size: var(--sm);
+  line-height: 21;
+}
+
+.label-big {
+  font-family: var(--inter);
+  font-size: var(--base);
+  font-weight: var(--semibold);
+}
+
+.label-small {
+  font-family: var(--inter);
+  font-size: var(--xs);
+  line-height: 17;
+  font-weight: var(--semibold);
+}
+
+.text-color__dark-grey {
+  color: var(--dark-grey);
+}
+.text-color__light-grey {
+  color: var(--light-grey);
+}
+.text-color__beige {
+  color: var(--beige);
+}
+
+/* ===== General ===== */
+.app {
+  background-color: var(--beige);
+
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+.page {
+  margin: 2rem 0rem;
+  padding-bottom: 12rem;
+}
+
+/* * https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ===== Flex & grid ===== */
+.flex {
+  display: flex;
+}
+
+.flex__column {
+  flex-direction: column;
+}

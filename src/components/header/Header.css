@@ -1,0 +1,9 @@
+.header {
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 4rem;
+}
+
+.header__logo {
+  max-width: 450px;
+}
