@@ -16,7 +16,7 @@ function Footer() {
             >
               Värmlands spelmansförbund
             </a>
-            <OpenInNewIcon />
+            <OpenInNewIcon aria-label="Öppna länk i nytt fönster" />
           </li>
           <li className="flex footer__nav-list-item">
             <a
@@ -27,7 +27,7 @@ function Footer() {
             >
               Länk till Hembygsgillet
             </a>
-            <OpenInNewIcon />
+            <OpenInNewIcon aria-label="Öppna länk i nytt fönster" />
           </li>
         </ul>
       </nav>

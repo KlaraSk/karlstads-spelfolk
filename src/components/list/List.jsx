@@ -1,11 +1,22 @@
+import { useEffect } from "react";
 import ListItem from "../list-item/ListItem";
-import { useFetch } from "../../api/useFetch";
 
-function List() {
-  const url = "http://localhost:7070/api/tunes";
-  const { tunes, isLoading, isError } = useFetch(url);
+function List({ tunes }) {
+  useEffect(() => {
+    console.log(tunes);
+  }, [tunes]);
 
-  return <ul>{<ListItem></ListItem>}</ul>;
+  return (
+    <>
+      {tunes && (
+        <ul className="list">
+          {tunes.map((tune) => {
+            return <ListItem key={tune.tuneId} tune={tune} />;
+          })}
+        </ul>
+      )}
+    </>
+  );
 }
 
 export default List;
