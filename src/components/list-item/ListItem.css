@@ -1,3 +1,16 @@
 .list-item {
   list-style-type: none;
 }
+
+.list-item__top {
+  align-items: center;
+}
+
+.list-item__nr {
+  background-color: var(--dark-green);
+  width: 60px;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}

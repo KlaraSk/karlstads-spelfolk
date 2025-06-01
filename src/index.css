@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid salmon;
 }
 
 /* ===== Variables ===== */
@@ -74,7 +75,7 @@
 .body-small {
   font-family: var(--inter);
   font-size: var(--sm);
-  line-height: 21;
+  line-height: 21px;
 }
 
 .label-big {
@@ -86,7 +87,7 @@
 .label-small {
   font-family: var(--inter);
   font-size: var(--xs);
-  line-height: 17;
+  line-height: 17px;
   font-weight: var(--semibold);
 }
 
@@ -136,4 +137,12 @@
 
 .flex__column {
   flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid__center {
+  place-items: center;
 }
