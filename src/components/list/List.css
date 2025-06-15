@@ -1,0 +1,12 @@
+.list {
+  row-gap: 2rem;
+}
+
+.list-headings {
+  margin-bottom: 1rem;
+}
+
+.list__title {
+  gap: 0.25rem;
+  align-items: center;
+}

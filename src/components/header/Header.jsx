@@ -9,6 +9,7 @@ function Header() {
       <Link to="/">
         <img src="/karlstads-spelfolk.svg" alt="Karlstads spelfolk" className="header__logo" />
       </Link>
+
       <Navigation></Navigation>
     </header>
   );

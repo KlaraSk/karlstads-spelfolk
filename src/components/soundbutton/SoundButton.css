@@ -1,0 +1,46 @@
+.sound-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sound-button__icon {
+  color: var(--beige);
+  background: var(--dark-green);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  padding: 0.25rem;
+}
+.sound-button__icon:hover {
+  background: var(--light-green);
+  transition: all ease-in-out 0.25s;
+}
+
+.sound-button__text {
+  position: relative;
+}
+
+.sound-button__text:hover {
+  text-decoration: solid 1pt red;
+}
+
+.sound-button__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--light-green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.sound-button__text:hover::after {
+  transform: scaleX(1);
+}

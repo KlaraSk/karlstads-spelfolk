@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 function Navigation() {
@@ -6,19 +6,34 @@ function Navigation() {
     <nav className="nav">
       <ul className=" nav__list flex">
         <li className="heading-2 nav__list-item">
-          <Link className="text-color__light-grey  nav__list-item-link" to="/">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+            }
+            to="/"
+          >
             Låtarna
-          </Link>
+          </NavLink>
         </li>
         <li className="heading-2 nav__list-item">
-          <Link className="text-color__light-grey  nav__list-item-link" to="/om-karlstads-spelfolk">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+            }
+            to="/om-karlstads-spelfolk"
+          >
             Om spelmanslaget
-          </Link>
+          </NavLink>
         </li>
         <li className="heading-2 nav__list-item">
-          <Link className="text-color__light-grey  nav__list-item-link" to="/bli-medlem">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+            }
+            to="/bli-medlem"
+          >
             Bli medlem
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

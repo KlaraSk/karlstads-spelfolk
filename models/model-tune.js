@@ -10,13 +10,12 @@ const tuneSchema = new Schema(
       required: true,
     },
     tuneNumber: { type: Number, required: true },
-    title: { type: String, minlength: 3, maxlength: 25, required: true },
+    title: { type: String, minlength: 3, maxlength: 45, required: true },
     category: { type: Object, required: true },
-    location: { type: String, required: true, minlength: 3, maxlength: 25 },
+    location: { type: String, minlength: 3, maxlength: 25 },
     composer: { type: String, minlength: 3, maxlength: 25 },
     isComposedByUs: { type: Boolean, default: false },
-    recording: { type: String, required: true },
-    userId: { type: String, required: true, length: 9 },
+    recordings: { type: Object, required: true },
   },
   { timestamps: true, versionKey: false }
 );
