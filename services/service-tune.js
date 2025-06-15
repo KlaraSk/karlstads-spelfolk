@@ -9,3 +9,13 @@ export async function getAllTunes() {
     return null;
   }
 }
+
+export async function createTune(tune) {
+  try {
+    const result = await Tune.create(tune);
+    return result;
+  } catch (error) {
+    console.log(error.message);
+    return null;
+  }
+}
