@@ -6,7 +6,6 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ListItemInfo from "../list-item-info/ListItemInfo.jsx";
 import SoundButton from "../soundbutton/SoundButton.jsx";
 import { formatDate } from "../../../utils/utils.js";
-import { StyledButton } from "../../components-styled/button/Button.styles.js";
 
 function ListItem({ tune }) {
   console.log(tune);

@@ -5,8 +5,8 @@ function Footer() {
   return (
     <footer className="footer  text-color__beige ">
       <nav className="footer__nav flex flex__column">
-        <h3 className="henpm ading-4">Länkar till relaterade sidor</h3>
-        <ul className="footer__nav-list flex body-base ">
+        {/* <h3 className="heading-4">Länkar till relaterade sidor</h3> */}
+        <ul className="footer__nav-list flex body-small ">
           <li className="flex footer__nav-list-item">
             <a
               className="footer__nav-list-item-link text-color__beige "
@@ -16,7 +16,7 @@ function Footer() {
             >
               Värmlands spelmansförbund
             </a>
-            <OpenInNewIcon aria-label="Öppna länk i nytt fönster" />
+            <OpenInNewIcon sx={{ fontSize: "medium" }} aria-label="Öppna länk i nytt fönster" />
           </li>
           <li className="flex footer__nav-list-item">
             <a
@@ -25,9 +25,9 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Länk till Hembygsgillet
+              Hembygdsgillet
             </a>
-            <OpenInNewIcon aria-label="Öppna länk i nytt fönster" />
+            <OpenInNewIcon sx={{ fontSize: "medium" }} aria-label="Öppna länk i nytt fönster" />
           </li>
         </ul>
       </nav>

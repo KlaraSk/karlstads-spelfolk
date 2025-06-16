@@ -33,6 +33,7 @@
 }
 
 .list-item__title {
+  margin-right: 0.25rem;
 }
 
 .list-item__middle {
