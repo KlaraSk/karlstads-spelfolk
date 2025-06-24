@@ -35,5 +35,10 @@ Just nu arbetar jag med att implementera en central spelare som tar emot det lju
 - Innehåll till övriga sidor (om/bli medlem)
 - Filtrering på t ex låttyp, låtskapare etc.
 - Sökfunktionalitet
+- Inloggning för admins:
+    - Kunna lägga upp, ändra och ta bort låtar ur databasen
+    - Kunna skapa egna listor, t ex inför spelningar
+- Inloggning för användare:
+    - Kunna skapa egna listor för individuell övning.
 
 
