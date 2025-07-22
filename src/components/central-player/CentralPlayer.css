@@ -1,0 +1,129 @@
+.central-player {
+  position: fixed;
+  bottom: 69px;
+  background-color: var(--light-grey);
+  width: 100%;
+  left: 0;
+  padding: 1rem 0rem;
+  color: var(--beige);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.central-player__ctrl-btns {
+  max-width: 1224px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0rem 2rem;
+  gap: 0.75rem;
+}
+
+.central-player__current-time,
+.central-player__duration {
+  background-color: none;
+  border: none;
+  align-items: center;
+}
+
+.central-player__progress-bar {
+  --bar-bg: var(--beige);
+  --seek-before-width: 0;
+  --knobby: var(--red);
+  --selectedKnobby: var(--dark-green);
+
+  appearance: none;
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  align-self: center;
+  width: 100%;
+  outline: none;
+}
+
+/* progress bar - safari */
+.central-player__progress-bar::-webkit-slider-runnable-track {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+/* progress bar - firefox */
+.central-player__progress-bar::-moz-range {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+.central-player__progress-bar::-moz-focus-outer {
+  border: 0;
+}
+
+/* progress bar elapsed time- chrome and safari */
+
+.central-player__progress-bar::before {
+  content: "";
+  height: 11px;
+  width: var(--seek-before-width);
+  background-color: var(--seek-before-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* progress bar elapsed time- firefox*/
+.central-player__progress-bar::-moz-range-progress {
+  background-color: var(--seek-before-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 11px;
+}
+
+/* knobby - chrome and safari */
+
+.central-player__progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+/* knobby while dragging - chrome and safari */
+.central-player__progress-bar:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background: var(--selectedKnobby);
+}
+
+/* knobby - firefox */
+.central-player__progress-bar::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+/* knobby while dragging - firefox */
+.central-player__progress-bar:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background: var(--selectedKnobby);
+}

@@ -1,4 +1,4 @@
-import { StyledButton, SoundButton2 } from "./Button.styles";
+import { StyledButton, PlayButton, ControlButton } from "./Button.styles";
 
 export default StyledButton;
-export { SoundButton2 };
+export { PlayButton, ControlButton };
