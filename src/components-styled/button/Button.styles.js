@@ -7,19 +7,6 @@ export const StyledButton = styled.button`
   color: var(--beige);
 `;
 
-export const SoundButton2 = styled(StyledButton)`
-  background: var(--dark-green);
-  color: var(--beige);
-  display: flex;
-  gap: 0.25rem;
-  align-items: center;
-  border-radius: 4px;
-  padding: 0.25rem;
-  &:hover {
-    background-color: var(--light-green);
-  }
-`;
-
 export const PlayButton = styled(StyledButton)`
   background: var(--beige);
   color: var(--light-grey);
@@ -34,7 +21,4 @@ export const PlayButton = styled(StyledButton)`
 `;
 export const ControlButton = styled(StyledButton)`
   background: none;
-
-  &:hover {
-  }
 `;

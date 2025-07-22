@@ -2,12 +2,24 @@ import { useFetch } from "../../api/useFetch.js";
 import List from "../../components/list/List.jsx";
 import "./HomePage.css";
 import CentralPlayer from "../../components/central-player/CentralPlayer.jsx";
+import { useState, createContext } from "react";
+
+const CurrentTuneContext = createContext(null);
 
 function HomePage() {
   const url = "http://localhost:7070/api/tunes";
   const { tunes, isLoading, isError } = useFetch(url);
+  const [currentTune, setCurrentTune] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [recording, setRecording] = useState(null);
+
+  // Adds key isPlaying on each tune. Default false
+  const tunesPlaylist = tunes.map((tune) => {
+    return { ...tune, isPlaying: false };
+  });
+
   return (
-    <>
+    <CurrentTuneContext.Provider value={{ currentTune, setCurrentTune, recording, setRecording, isPlaying, setIsPlaying }}>
       <section className="page home-page">
         <h1 className="sr-only">Karlstads spelfolk</h1>
 
@@ -18,11 +30,12 @@ function HomePage() {
         </p>
         {isError && <p>Error</p>}
         {isLoading && <p>Loading</p>}
-        {tunes && <List tunes={tunes}></List>}
+        {tunesPlaylist && <List tunes={tunesPlaylist}></List>}
       </section>
       <CentralPlayer></CentralPlayer>
-    </>
+    </CurrentTuneContext.Provider>
   );
 }
 
 export default HomePage;
+export { CurrentTuneContext };

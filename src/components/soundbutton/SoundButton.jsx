@@ -1,50 +1,42 @@
-import { useEffect, useRef, useState } from "react";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { useContext } from "react";
 import "./Soundbutton.css";
-import PauseIcon from "@mui/icons-material/Pause";
-import useSound from "use-sound";
-import { StyledButton, SoundButton2 } from "../../components-styled/button/Button.styles.js";
+import { CurrentTuneContext } from "../../pages/home-page/HomePage.jsx";
 
-function SoundButton({ recording, aria, btntext }) {
-  //useSound använder en tom sträng i väntan på att "recording" ska laddas in. När "recording" är redo triggas hooken och React laddar om den med det nya värdet -- ljudet kan spelas.
-  const [play, { pause, stop, sound }] = useSound(recording ?? "", { volume: 0.5 });
-  const [isPlaying, setIsPlaying] = useState(false);
+function SoundButton({ aria, children, tune }) {
+  // Context
+  const { currentTune, setCurrentTune, recording, setRecording, isPlaying, setIsPlaying } = useContext(CurrentTuneContext);
 
-  // Togglar play och pause
+  // Toggle play/pause
   const handleClick = () => {
-    console.log(sound);
+    const isSameTune = currentTune && tune.title === currentTune.title;
+    const clickedIsLead = children[1].props.children === "Melodi";
+    const clickedRecording = clickedIsLead ? tune.recordings.main : tune.recordings.sub;
 
-    if (sound && sound.playing()) {
-      pause();
-      setIsPlaying(false);
-    } else {
-      // if (sound) sound.seek(0); //Nollställer låten, kör från start.
-      play();
+    if (!isPlaying) {
+      // Nothing is playing
+      setCurrentTune({ ...tune, isPlaying: true });
       setIsPlaying(true);
+      setRecording(clickedRecording);
+    } else if (isSameTune) {
+      // Same tune as before
+      if (recording === clickedRecording) {
+        // Same recoding, pause
+        setCurrentTune({ ...tune, isPlaying: false });
+        setIsPlaying(false);
+      } else {
+        // Same tune, another recording
+        setRecording(clickedRecording);
+      }
+    } else {
+      // New tune
+      setCurrentTune({ ...tune, isPlaying: true });
+      setRecording(clickedRecording);
     }
   };
 
-  useEffect(() => {
-    if (!sound) return;
-
-    const handleEnd = () => {
-      setIsPlaying(false);
-    };
-
-    sound.on("end", handleEnd);
-    return () => {
-      sound.off("end", handleEnd);
-    };
-  }, [sound]);
   return (
-    // <SoundButton2>
-    //   {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-    //   <span className="label-big sound-button__text">{btntext}</span>
-    // </SoundButton2>
-
     <button className="sound-button flex" onClick={handleClick} aria-label={aria}>
-      {isPlaying ? <PauseIcon className="sound-button__icon" /> : <PlayArrowIcon className="sound-button__icon" />}
-      <span className="label-big sound-button__text">{btntext}</span>
+      {children}
     </button>
   );
 }
