@@ -1,0 +1,11 @@
+.about-page {
+  gap: 3rem;
+}
+.about-page__time {
+  margin-right: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.about-page__subtitle {
+  margin: 2rem 0rem 0.5rem 0rem;
+}
