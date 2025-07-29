@@ -3,6 +3,7 @@ import List from "../../components/list/List.jsx";
 import "./HomePage.css";
 import CentralPlayer from "../../components/central-player/CentralPlayer.jsx";
 import { useState, createContext } from "react";
+import SearchForm from "../../components/search-form/SearchForm.jsx";
 
 const CurrentTuneContext = createContext(null);
 
@@ -30,6 +31,7 @@ function HomePage() {
         </p>
         {isError && <p>Error</p>}
         {isLoading && <p>Loading</p>}
+        {tunesPlaylist && <SearchForm tunes={tunesPlaylist} />}
         {tunesPlaylist && <List tunes={tunesPlaylist}></List>}
       </section>
       <CentralPlayer></CentralPlayer>
