@@ -14,9 +14,9 @@ function AboutPage() {
         <p className="body-base">Stämning, uppvärmning</p>
         <h3 className="heading-4 about-page__time">19.00</h3>
         <p className="body-base">Övning med fokus på låtar, teknik och arrangemang inför kommande spelningar.</p>
-        <h3 className="heading-4 about-page__time">Ca 20.00</h3>
+        <h3 className="heading-4 about-page__time">Cirka 20.00</h3>
         <p className="body-base">Fika. Kvällens höjdpunkt?</p>
-        <h3 className="heading-4 about-page__time">Efter fikat - ca 21.30</h3>
+        <h3 className="heading-4 about-page__time">Efter fikat - cirka 21.30</h3>
         <p className="body-base">
           Efter fikat är det fritt spel. Vi lirar gamla och nya låtar och lär av varandra. Utmärkt att börja med detta pass när man är ny i
           Karlstads Spelfolk och vill utöka och förbättra sitt spel.

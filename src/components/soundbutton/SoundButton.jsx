@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Soundbutton.css";
-import { CurrentTuneContext } from "../../pages/home-page/HomePage.jsx";
+import { CurrentTuneContext } from "../../App.jsx";
 
 function SoundButton({ aria, children, tune }) {
   // Context

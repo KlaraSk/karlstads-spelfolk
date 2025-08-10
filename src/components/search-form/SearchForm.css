@@ -1,0 +1,53 @@
+.form {
+  align-self: center;
+  width: 60vw;
+  border-radius: 4pt;
+  background-color: var(--light-green);
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  border-radius: 4pt;
+  border: none;
+  background-color: var(--light-green);
+  padding: 0.5rem 0.75rem;
+}
+
+.form--is-visible {
+  border-radius: 4pt 4pt 0 0;
+}
+
+.form__input::placeholder {
+  color: var(--beige);
+}
+
+.form__input:focus {
+  outline: none;
+}
+.form__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.form__search-icon {
+  margin-left: 0.5rem;
+}
+
+.form__list {
+  position: absolute;
+  border-radius: 0 0 4px 4px;
+  top: 40px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  width: 100%;
+  gap: 0.5rem;
+  z-index: 2;
+  background-color: var(--light-grey);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form__list-item {
+  list-style: none;
+  padding-left: 10px;
+}

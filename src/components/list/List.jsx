@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import ListItem from "../list-item/ListItem.jsx";
 import "./List.css";
+import { CurrentTuneContext } from "../../App.jsx";
 
-function List({ tunes }) {
+function List() {
+  const { playList } = useContext(CurrentTuneContext);
+
   return (
     <section>
-      {tunes && (
+      {playList && (
         <ul className="list flex flex__column">
-          {tunes.map((tune) => {
+          {playList.map((tune) => {
             return <ListItem key={tune.tuneId} tune={tune} />;
           })}
         </ul>
