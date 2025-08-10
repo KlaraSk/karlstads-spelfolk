@@ -9,7 +9,7 @@ import { formatDate } from "../../../utils/utils.js";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import { useContext } from "react";
-import { CurrentTuneContext } from "../../pages/home-page/HomePage.jsx";
+import { CurrentTuneContext } from "../../App.jsx";
 
 function ListItem({ tune }) {
   // Context

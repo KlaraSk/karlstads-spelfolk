@@ -16,6 +16,5 @@ export const useFetch = (url) => {
       .finally(() => setIsLoading(false));
   }, [url]);
 
-  //   console.log(tunes);
   return { tunes, isLoading, isError };
 };

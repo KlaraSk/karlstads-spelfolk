@@ -5,7 +5,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 import Forward30Icon from "@mui/icons-material/Forward30";
 import Replay30Icon from "@mui/icons-material/Replay30";
 import { useContext, useRef, useEffect, useState } from "react";
-import { CurrentTuneContext } from "../../pages/home-page/HomePage.jsx";
+import { CurrentTuneContext } from "../../App.jsx";
 import { calculateTime } from "../../../utils/utils.js";
 
 function CentralPlayer() {
