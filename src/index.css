@@ -95,6 +95,9 @@
 .text-color__dark-grey {
   color: var(--dark-grey);
 }
+.text-color__dark-green {
+  color: var(--dark-green);
+}
 .text-color__light-grey {
   color: var(--light-grey);
 }
@@ -174,7 +177,7 @@
 
 @media screen and (max-width: 1400px) {
   .wrapper {
-    margin: 0rem 2rem;
+    padding: 0rem 2rem;
   }
 }
 @media screen and (max-width: 1200px) {
