@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 function Navigation() {
@@ -8,7 +8,7 @@ function Navigation() {
         <li className="heading-2 nav__list-item">
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+              isActive ? "text-color__dark-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
             }
             to="/"
           >
@@ -18,7 +18,7 @@ function Navigation() {
         <li className="heading-2 nav__list-item">
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+              isActive ? "text-color__dark-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
             }
             to="/om-karlstads-spelfolk"
           >
@@ -28,7 +28,7 @@ function Navigation() {
         <li className="heading-2 nav__list-item">
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-color__light-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
+              isActive ? "text-color__dark-grey  nav__list-item-active" : "text-color__light-grey  nav__list-item-link"
             }
             to="/bli-medlem"
           >
