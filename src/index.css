@@ -104,6 +104,9 @@
 .text-color__beige {
   color: var(--beige);
 }
+.text-color__red {
+  color: var(--red);
+}
 
 /* ===== General ===== */
 .app {

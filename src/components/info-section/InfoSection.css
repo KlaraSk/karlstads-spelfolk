@@ -1,6 +1,6 @@
 .info-section {
   border-radius: 4px;
-  border: solid 1.5px var(--light-green);
+  border: solid 2px var(--light-green);
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -13,6 +13,7 @@
 
 .info-section__img {
   height: 100%;
+  width: 100%;
 }
 
 .info-section__text-div {

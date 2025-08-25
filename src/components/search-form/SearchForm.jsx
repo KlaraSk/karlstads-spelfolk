@@ -83,11 +83,11 @@ function SearchForm({}) {
         Sök efter en låt
       </label>
       <ControlButton onClick={handleSubmit}>
-        <Search className="text-color__beige form__search-icon"></Search>
+        <Search className="text-color__red form__search-icon"></Search>
       </ControlButton>
 
       <input
-        className={"body-base text-color__beige form__input"}
+        className={"body-base text-color__dark-green form__input"}
         id="searchinput"
         type="search"
         name="searchinput"
