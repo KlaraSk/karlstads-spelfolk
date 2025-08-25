@@ -32,7 +32,7 @@ function Navigation() {
             }
             to="/bli-medlem"
           >
-            Bli medlem
+            Kontakt
           </NavLink>
         </li>
       </ul>

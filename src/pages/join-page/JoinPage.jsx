@@ -1,5 +1,5 @@
 function JoinPage() {
-  return <div>JoinPage</div>;
+  return <div>Kontakt</div>;
 }
 
 export default JoinPage;

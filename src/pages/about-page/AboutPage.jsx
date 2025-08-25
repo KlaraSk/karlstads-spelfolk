@@ -1,5 +1,6 @@
 import InfoSection from "../../components/info-section/InfoSection";
 import "./AboutPage.css";
+import { Link } from "react-router-dom";
 
 function AboutPage() {
   return (
@@ -34,6 +35,17 @@ function AboutPage() {
             Länk till Värmlandstrafiks webbsida.
           </a>
         </p>
+      </InfoSection>
+      <InfoSection
+        imgSrc={
+          "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDc3cW0zcWFtZGkyMnFvM3Nua2ViOHUzaXA0aDQ4ZGlwNTduMjdudyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DhstvI3zZ598Nb1rFf/giphy.gif"
+        }
+        title={"Bli medlem"}
+      >
+        <p className="body-base ">En text om hur du blir medlem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sint? </p>
+        <Link className="body-base" to={"/bli-medlem"}>
+          Kontakta oss
+        </Link>
       </InfoSection>
     </section>
   );
